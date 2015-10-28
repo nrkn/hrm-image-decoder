@@ -16,10 +16,16 @@ Unlike some of my other HRM projects, this one is plain ES5
 ```javascript
 const decode = require( 'hrm-image-decoder' )
 
-const lines = decode( 'eJxTY2Bg+MNixfeHhUX0ENNi7UNM1sF2LDEh95kPhv9h2VD5h+XH1F2s82dLstlvMmPP3XOdTe0pUAuDGft37n38kryXha9xnRaT5M1UluS9q35QiF/3kXCy7XzB+3ZAM+2t+EBq/9jH8CvaPddVtPuTNdd+dmOD3dFtdvbXboLkGuweP/Kz/HFLxfDazVd61ncfSMXc28Tx+BHDKBgFo4AuAADOmTlU;' )
+const hrmImage = `
+eJxTY2Bg+MNixfeHhUX0ENNi7UNM1sF2LDEh95kPhv9h2VD5h+XH1F2s82dLstlvMmPP3XOdTe0pUAuD
+Gft37n38kryXha9xnRaT5M1UluS9q35QiF/3kXCy7XzB+3ZAM+2t+EBq/9jH8CvaPddVtPuTNdd+dmOD
+3dFtdvbXboLkGuweP/Kz/HFLxfDazVd61ncfSMXc28Tx+BHDKBgFo4AuAADOmTlU;
+`
+
+const paths = decode( hrmImage )
 ```
 
-The result is an array of lines, each of which is an array of points
+The result is an array of paths, each of which is an array of points
 
 You can then view them as SVG by doing something like:
 
