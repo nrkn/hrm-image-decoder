@@ -27,11 +27,11 @@ You can then view them as SVG by doing something like:
 const linesToSvg = lines =>
   '<svg width="100%" height="100%" viewBox="0 0 65536 21845" xmlns="http://www.w3.org/2000/svg">\n' +
   lines.map( line =>
-    '<path fill="transparent" stroke="black" stroke-width="2048" stroke-linecap="round" d="' +
+    '<path fill="transparent" stroke="black" stroke-width="1920" stroke-linecap="round" stroke-linejoin="round" d="' +
     'M ' + line.map( p => {
       return p[ 0 ] + ' ' + ~~( p[ 1 ] / 3 )
     }).join( ' L ' ) +
-    '" />\n'
+    ' l 0 0" />\n'
   ) + 
   '</svg>'
 ```
