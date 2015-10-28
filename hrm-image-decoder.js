@@ -6,27 +6,27 @@ module.exports = function( str ){
   var fromBase64 = new Buffer( str, 'base64' )  
   var inflated = zlib.inflateSync( fromBase64 )  
   var len = inflated.readUInt32LE( 0 )  
-  var values = []  
+  var points = []  
   
   for( var i = 0; i < len; i++ ){
     var start = inflated.readUInt16LE( i * 4 + 4 )
     var end = inflated.readUInt16LE( i * 4 + 6 )
-    values.push( [ start, end ] )
+    points.push( [ start, end ] )
   }
   
-  var lines = []
-  var line = []
+  var paths = []
+  var path = []
   
-  for( var i = 0; i < values.length; i++ ){
-    var point = values[ i ]
+  for( var i = 0; i < points.length; i++ ){
+    var point = points[ i ]
 
     if( point[ 0 ] === 0 && point[ 1 ] === 0 ){
-      lines.push( line.slice() )
-      line = []
+      paths.push( path.slice() )
+      path = []
     } else {
-      line.push( point )
+      path.push( point )
     }
   }  
   
-  return lines
+  return paths
 }
