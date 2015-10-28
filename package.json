@@ -1,0 +1,25 @@
+{
+  "name": "hrm-image-decoder",
+  "version": "0.1.0",
+  "description": "An image decoder for Human Resource Machine programs",
+  "main": "hrm-image-decoder.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nrkn/hrm-image-decoder.git"
+  },
+  "keywords": [
+    "hrm",
+    "human",
+    "resouce",
+    "machine",
+    "program",
+    "image",
+    "decoder"
+  ],
+  "author": "Nik Coughlin <nrkn.com@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nrkn/hrm-image-decoder/issues"
+  },
+  "homepage": "https://github.com/nrkn/hrm-image-decoder#readme"
+}
